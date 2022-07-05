@@ -1,0 +1,7 @@
+*               -text
+.gitattributes  text eol=lf diff
+.gitignore      text eol=lf diff
+LICENSE         text eol=lf diff
+*.md            text eol=lf diff
+
+*.sh            text eol=lf diff
