@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# TODO
+# - Add input parameter for target path
+# - Add input parameter for fetching: -f and --fetch
+
 for repo in */; do
     if [ -d "$repo/.git" ]; then
         echo "----------------------------"
