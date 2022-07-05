@@ -1,4 +1,4 @@
 # Utilities to work with Git
-* filetype.sh
-* list-file-extensions.sh
-* show-repo-states.sh
+* filetype
+* git-list-file-extensions
+* git-list-repo-states
