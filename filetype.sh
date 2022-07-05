@@ -4,7 +4,7 @@
 # Can be used for exampel to to get the configuration in .gitattributes done
 # Git directories (.git) are ignored
 #
-# filetype.sh [path] [t]
+# filetype.sh [path] [-t]
 #
 # [path] Path to a file or a directory
 #        If no path is given, the current workding directory is used.
@@ -13,6 +13,9 @@
 #        Depending on the number of files, this may take some time until the output is created.
 #        Makes only sense for directories.
 #        The sorting criteria is the charset
+
+# TODO
+# - Change order of input parameters: [-t] [path]
 
 table_output="false"
 
@@ -62,14 +65,14 @@ if [ "$#" -eq "0" ]; then
 elif [ "$#" -eq "1" ]; then
     if [ "$1" == "." ]; then
         get_file_info_wrapper "."
-    elif [ "$1" == "t" ]; then
+    elif [ "$1" == "-t" ]; then
         table_output="true"
         get_file_info_wrapper "." | column -t -s ":" | sort
     else
         get_file_info_wrapper "$1"
     fi
 else
-    if [ "$2" == "t" ]; then
+    if [ "$2" == "-t" ]; then
         table_output="true"
         get_file_info_wrapper "$1" | column -t -s ":" | sort
     else
