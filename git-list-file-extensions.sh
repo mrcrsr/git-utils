@@ -12,8 +12,6 @@ if [ -z "$search_path" ]; then
     search_path="."
 fi
 
-output_file="file_extensions.txt"
-
 # Files with dot
 printf "Files with extension:\n"
 files_with_dot="$(find "$search_path" -type f | sed -e 's/\.\///' | sed -e 's/^.*\///' | grep -e "\." | sed 's/^.*\././' | sort | uniq)"
