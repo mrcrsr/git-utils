@@ -1,3 +1,9 @@
+THIS IS THE OLD VERSION OF THE REPO.
+DO NOT USE ANYMOR!!
+
+
+
+
 # Utilities to work with Git
 * filetype  
   `filetype [path] [-t]`
